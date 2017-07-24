@@ -4,7 +4,7 @@ A terraform module to manage an RDS aurora cluster
 Example module instance:
 
     module "db_asdb" { 
-      source                     = "https://github.com/NYULibraries/aws_rds_cluster"
+      source             = "https://github.com/NYULibraries/aws_rds_cluster"
       // cluster vars
       cluster_identifier = "${var.cluster_identifier}"
       availability_zones = [ "${var.availability_zones}" ]
