@@ -11,13 +11,14 @@ output "instance_writer" {
   value = "${aws_rds_cluster_instance.instance.writer}"
 }
 
-output "instance_storage" {
-  value = "${aws_rds_cluster_instance.instance.allocated_storage}"
-}
+//output "instance_storage" {
+//  value = "${aws_rds_cluster_instance.instance.allocated_storage}"
+//}
 
-output "instance_azs" {
-  value = "${aws_rds_cluster_instance.instance.availability_zones}"
-}
+// throwing errors since 0.11.0
+//output "instance_azs" {
+//  value = "${aws_rds_cluster_instance.instance.availability_zones}"
+//}
 
 output "instance_addr" {
   value = "${aws_rds_cluster_instance.instance.endpoint}"
@@ -31,17 +32,19 @@ output "instance_engine_version" {
   value = "${aws_rds_cluster_instance.instance.engine_version}"
 }
 
-output "instance_db_name" {
-  value = "${aws_rds_cluster_instance.instance.database_name}"
-}
+// throws errors after 0.11.0
+//output "instance_db_name" {
+//  value = "${aws_rds_cluster_instance.instance.database_name}"
+//}
 
 output "instance_port" {
   value = "${aws_rds_cluster_instance.instance.port}"
 }
 
-output "instance_status" {
-  value = "${aws_rds_cluster_instance.instance.status}"
-}
+// throws errors after 0.11.0
+//output "instance_status" {
+//  value = "${aws_rds_cluster_instance.instance.status}"
+//}
 
 
 output "instance_storage_encrypted" {
@@ -60,20 +63,21 @@ output "cluster_id" {
   value = "${aws_rds_cluster.cluster.id}"
 }
 
-output "cluster_resource_id" {
-  value = "${aws_rds_cluster.cluster.resource_id}"
-}
+// throws errors after to 0.11.0
+//output "cluster_resource_id" {
+//  value = "${aws_rds_cluster.cluster.resource_id}"
+//}
 
-output "cluster_members" {
-  value = "${aws_rds_cluster.cluster.members}"
-}
+//output "cluster_members" {
+//  value = "${aws_rds_cluster.cluster.members}"
+//}
 
-output "cluster_storage" {
-  value = "${aws_rds_cluster.cluster.allocated_storage}"
-}
+//output "cluster_storage" {
+////  value = "${aws_rds_cluster.cluster.allocated_storage}"
+//}
 
 output "cluster_azs" {
-  value = "${aws_rds_cluster.cluster.availabitily_zones}"
+  value = "${aws_rds_cluster.cluster.availability_zones}"
 }
 
 output "cluster_backup_retention" {
@@ -84,9 +88,9 @@ output "cluster_backup_window" {
   value = "${aws_rds_cluster.cluster.preferred_backup_window}"
 }
 
-output "cluster_maintenance_window" {
-  value = "${aws_rds_cluster.cluster.preferred_maintenance_window}"
-}
+//output "cluster_maintenance_window" {
+//  value = "${aws_rds_cluster.cluster.preferred_maintenance_window}"
+//}
 
 output "cluster_addr" {
   value = "${aws_rds_cluster.cluster.endpoint}"
@@ -104,9 +108,9 @@ output "cluster_engine_version" {
   value = "${aws_rds_cluster.cluster.engine_version}"
 }
 
-output "cluster_instance_maintenance" {
-  value = "${aws_rds_cluster.cluster.maintenance_window}"
-}
+//output "cluster_instance_maintenance" {
+//  value = "${aws_rds_cluster.cluster.maintenance_window}"
+//}
 
 output "cluster_db_name" {
   value = "${aws_rds_cluster.cluster.database_name}"
@@ -116,9 +120,9 @@ output "cluster_port" {
   value = "${aws_rds_cluster.cluster.port}"
 }
 
-output "cluster_status" {
-  value = "${aws_rds_cluster.cluster.status}"
-}
+//output "cluster_status" {
+//  value = "${aws_rds_cluster.cluster.status}"
+//}
 
 output "cluster_master_username" {
   value = "${aws_rds_cluster.cluster.master_username}"
