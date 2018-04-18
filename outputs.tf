@@ -1,14 +1,14 @@
 // cluster instance vars
 output "instance_cluster_identifier" {
-  value = "${aws_rds_cluster_instance.instance.cluster_identifier}"
+  value = "${aws_rds_cluster_instance.instance.*.cluster_identifier}"
 }
 
 output "instance_id" {
-  value = "${aws_rds_cluster_instance.instance.id}"
+  value = "${aws_rds_cluster_instance.instance.*.id}"
 }
 
 output "instance_writer" {
-  value = "${aws_rds_cluster_instance.instance.writer}"
+  value = "${aws_rds_cluster_instance.instance.*.writer}"
 }
 
 //output "instance_storage" {
@@ -21,15 +21,15 @@ output "instance_writer" {
 //}
 
 output "instance_addr" {
-  value = "${aws_rds_cluster_instance.instance.endpoint}"
+  value = "${aws_rds_cluster_instance.instance.*.endpoint}"
 }
 
 output "instance_engine" {
-  value = "${aws_rds_cluster_instance.instance.engine}"
+  value = "${aws_rds_cluster_instance.instance.*.engine}"
 }
 
 output "instance_engine_version" {
-  value = "${aws_rds_cluster_instance.instance.engine_version}"
+  value = "${aws_rds_cluster_instance.instance.*.engine_version}"
 }
 
 // throws errors after 0.11.0
@@ -38,7 +38,7 @@ output "instance_engine_version" {
 //}
 
 output "instance_port" {
-  value = "${aws_rds_cluster_instance.instance.port}"
+  value = "${aws_rds_cluster_instance.instance.*.port}"
 }
 
 // throws errors after 0.11.0
@@ -48,11 +48,11 @@ output "instance_port" {
 
 
 output "instance_storage_encrypted" {
-  value = "${aws_rds_cluster_instance.instance.storage_encrypted}"
+  value = "${aws_rds_cluster_instance.instance.*.storage_encrypted}"
 }
 
 output "instance_keyid" {
-  value = "${aws_rds_cluster_instance.instance.kms_key_id}"
+  value = "${aws_rds_cluster_instance.instance.*.kms_key_id}"
 }
 
 //
